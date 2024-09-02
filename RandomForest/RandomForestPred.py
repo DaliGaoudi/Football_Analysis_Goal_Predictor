@@ -9,3 +9,10 @@ new_shot_df = pd.DataFrame(new_shot, columns=['x', 'y', 'distance', 'angle', 'de
 
 prediction = model.predict(new_shot_df)
 print(f"Prediction: {'Goal' if prediction[0] == 1 else 'No Goal'}")
+
+# Get probability predictions
+probabilities = model.predict_proba(new_shot_df)
+
+# Probability of a goal (second column)
+goal_probability = probabilities[0][1]  # First row, second column (probability of class 1)
+print(f"Probability of goal: {goal_probability:.2f}")
