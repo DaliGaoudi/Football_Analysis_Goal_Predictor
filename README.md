@@ -1,4 +1,4 @@
-#Project details
+# Project details
 
 This project is about creating an AI using ML that tries to predict whether a shot on goal will be a successfull goal or not.
 The Model was trained on a dataset of shot events fetched from the https://github.com/statsbomb/open-data database. 
